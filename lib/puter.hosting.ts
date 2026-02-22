@@ -14,7 +14,7 @@ export const getOrCreateHostingConfig = async (): Promise<HostingConfig | null> 
     try {
         const created = await puter.hosting.create(subdomain, ".");
 
-        return { subdomain: created.subdomain };
+        const record = { subdomain: created.subdomain };
     } catch (err) {
         console.error("Failed to set hosting config:", err);
         return null;
