@@ -37,7 +37,7 @@ router.post("/api/projects/save", async({ request, user}) => {
 
         return { saved: true, id: project.id, project: payload }
     } catch (err) {
-        return jsonError(500, "Failed to save prject", { message: err.message || "Unknown Error"})
+        return jsonError(500, "Failed to save project", { message: err.message || "Unknown Error"})
     }
 })
 
